@@ -1,0 +1,183 @@
+/* ---------------------------------------------------------------- */
+//  This is what Gulp Boilerplate renders in the final style.css,
+//  so import any custom code into here in the order you want them
+//  to appear
+/* ---------------------------------------------------------------- */
+
+// These two are mandatory if you want anything to work in Bootstrap
+@import 'bootstrap/variables'
+@import 'bootstrap/mixins'
+
+// Now we get to the more optional imports, though without these
+// everything's gonna look all screwed up
+@import 'bootstrap/grid'
+@import 'bootstrap/type'
+
+// Don't want to use Bootstrap at all? Remove the previous lines
+// and uncomment the following to use Skeleton CSS
+// @import 'styles/skeleton.styl'
+
+body
+  display flex
+
+.b-page
+
+  &__container
+    width 840px
+    margin: 0 auto
+
+  &__header
+    display flex
+    flex-flow row wrap
+    justify-content space-between
+
+  &__content
+    margin-top 126px
+
+.b-header
+
+  &__line
+    background url(../img/line.png)no-repeat center
+    width 476px
+    height 65px
+    color: white;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 48px;
+
+    p
+      padding-left: 24px
+
+.b-content
+
+  &__background
+    background url(../img/background.png)no-repeat center
+    width 840px
+    height 175px
+    position relative
+
+    &--water
+      background url(../img/water.png)no-repeat center
+      width 207px
+      height 328px
+      position absolute
+      top -190px
+      left 215px
+
+  &__login
+    margin-top -50px
+    position relative
+    z-index 10
+    display flex
+
+.b-login
+
+  &__form
+    width 290px
+    margin 0 auto
+    text-align right
+
+.b-form
+
+  &__input-wrap
+    margin-bottom 5px
+
+    span
+      color black
+      font-family Arial
+      font-size 16px
+      font-weight 700
+      line-height 35px
+      text-transform uppercase
+      position relative
+      top 1px
+
+  &__text
+    width 140px
+    margin-left 5px
+    border 1px solid #41403F;
+
+  &__submit
+    width 140px
+    border none
+    background #EB652F
+    color #fff
+    text-transform uppercase
+    color white
+    font-family Arial
+    font-size 16px
+    font-weight 700
+    padding 5px 0 2px
+    outline none
+
+    &:focus
+      border none
+      outline none
+
+@media screen and (max-width: 1023px)
+
+    .b-page__content
+      margin-top 50px
+
+    body
+      overflow hidden
+
+    .b-page
+
+      &__container
+        max-width 767px
+        width 100%
+
+    .b-header
+
+      &__line
+        display none
+
+      &__logo
+        margin 10px auto
+
+    .b-content__background--water
+      display none
+
+@media screen and (max-width: 767px)
+
+    .b-page__content
+      margin-top 50px
+
+    body
+      overflow hidden
+
+    .b-page
+
+      &__container
+        max-width 767px
+        width 100%
+
+    .b-header
+
+      &__line
+        display none
+
+      &__logo
+        margin 10px auto
+
+    .b-content__background--water
+      display none
+
+
+@media (max-height: 360px) and (max-width: 480px)
+
+  .b-page__content
+    margin-top 0px
+
+  .b-content__login
+    margin-top -100px
+
+@media (max-height: 360px) and (max-width: 640px)
+
+  .b-page__content
+    margin-top 0px
+
+  .b-content__login
+    margin-top -100px
